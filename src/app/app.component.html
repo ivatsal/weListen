@@ -1,0 +1,9 @@
+<div *ngIf="track">
+  <h2>{{ track.name }}</h2>
+  <p>Artist: {{ track.artists[0].name }}</p>
+  <p>Album: {{ track.album.name }}</p>
+  <p>Duration: {{ track.duration_ms | number: '1.0-0' }} ms</p>
+</div>
+
+
+<router-outlet></router-outlet>
