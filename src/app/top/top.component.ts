@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SpotifyService } from 'src/services/spotify.service';
+import { SpotifyService } from '../spotify.service';
+
 
 @Component({
   selector: 'app-top',
