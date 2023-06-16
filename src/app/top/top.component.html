@@ -1,0 +1,13 @@
+<div>
+    <p class="header-txt">Stream</p>
+    <div class="card-main">
+        <div class="card" *ngFor="let item of track.tracks.items">
+            <img class="artist-img" src="{{ item.track.album.images[1].url }}" alt="Track Image" />
+            <div class="normal-txt">
+                <div class="txt">{{ item.track.name }}</div>
+                <div class="sub-text">Artist: {{ item.track.artists[0].name }}</div>
+                <div class="sub-text">Popularity: {{ item.track.popularity }}</div>
+            </div>
+        </div>
+    </div>
+</div>

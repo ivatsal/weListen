@@ -1,9 +1,38 @@
-<div *ngIf="track">
-  <h2>{{ track.name }}</h2>
-  <p>Artist: {{ track.artists[0].name }}</p>
-  <p>Album: {{ track.album.name }}</p>
-  <p>Duration: {{ track.duration_ms | number: '1.0-0' }} ms</p>
-</div>
+<div class="container">
+  <mat-drawer-container style="height: 100vh;">
+    <mat-drawer mode="side" opened disableClose class="side-nav">
+      <div class="header-logo">
+        <img class="profile-logo" src="assets/we.jpeg">
+        <div class="head-txt">
+          <span class="name-txt">Vatsal Patel</span>
+          <span class="logout">Log out</span>
+        </div>
+      </div>
+      <div class="social-part">
+        <div class="following-txt">
+          <a class="count">51</a>
+          <a class="social-text">following</a>
+        </div>
+        <div class="follower-txt">
+          <a class="count">41</a>
+          <a class="social-text">followers</a>
+        </div>
+      </div>
+      <div class="btn-container">
+        <h2>MAIN</h2>
+        <div class="icon-font" *ngFor="let menu of menuData">
+          <button mat-icon-button class="item-content">
+            <a class="menu-font">{{ menu.name }}</a>
+            <mat-icon>{{ menu.icon }}</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content style="background: black;">
+      <app-top></app-top>
+    </mat-drawer-content>
+  </mat-drawer-container>
 
+</div>
 
 <router-outlet></router-outlet>

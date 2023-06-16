@@ -1,0 +1,44 @@
+.header-txt{
+    color: white;
+    margin-left: 30px;
+    font-size: 35px;
+}
+.card-main {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px 90px;
+
+
+    .card {
+        display: flex;
+        flex-direction: column;
+
+
+        .artist-img {
+            height: 200px;
+            width: 200px;
+        }
+
+        .normal-txt {
+            font-size: 20px;
+            color: white;
+            max-height: 85px;
+            max-width: 200px;
+
+            .txt {
+                margin: 8px 0;
+                max-height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+            }
+
+            .sub-text {
+                font-size: 16px;
+                color: rgb(139, 158, 170);
+            }
+        }
+    }
+}
