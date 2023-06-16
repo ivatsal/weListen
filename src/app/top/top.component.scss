@@ -1,8 +1,10 @@
-.header-txt{
+.header-txt {
     color: white;
     margin-left: 30px;
     font-size: 35px;
+    cursor: pointer;
 }
+
 .card-main {
     display: flex;
     flex-direction: row;
@@ -19,6 +21,7 @@
         .artist-img {
             height: 200px;
             width: 200px;
+            cursor: pointer;
         }
 
         .normal-txt {
@@ -33,12 +36,41 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
+                cursor: pointer;
             }
 
             .sub-text {
                 font-size: 16px;
                 color: rgb(139, 158, 170);
+                cursor: pointer;
             }
         }
+    }
+}
+
+.music-player {
+    position: fixed;
+    bottom: 0;
+    background: rgb(34, 35, 38);
+    height: 100px;
+    width: 100%;
+
+    .btn-common {
+        color: white;
+        margin: 35px;
+    }
+
+    .player-icon {
+        font-size: 45px;
+        height: 120%;
+        width: 100%;
+    }
+
+    .btn-playpause {
+        display: none;
+    }
+    
+    .btn-playpause.active {
+        display: inline-block;
     }
 }

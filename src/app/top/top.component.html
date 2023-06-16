@@ -11,3 +11,17 @@
         </div>
     </div>
 </div>
+
+<div class="music-player">
+    <audio #audioPlayer [src]="audioUrl"></audio>
+    <button class="btn-common" mat-button><mat-icon class="player-icon">shuffle</mat-icon></button>
+    <button class="btn-common" mat-button (click)="goBackward()"><mat-icon class="player-icon">skip_previous</mat-icon></button>
+    <button class="btn-common" mat-button (click)="playPause()">
+        <mat-icon class="player-icon">{{ isPlaying ? 'pause_circle' : 'play_circle' }}</mat-icon></button>      
+    <button class="btn-common" mat-button (click)="goForward()"><mat-icon class="player-icon">skip_next</mat-icon></button>
+    <button class="btn-common" mat-button for="repeat" [(ngModel)]="repeat"><mat-icon class="player-icon">replay</mat-icon></button>
+    <button class="btn-common" mat-button (click)="toggleMute()">
+        <mat-icon class="player-icon">{{ isMute ? 'volume_up' : 'volume_mute' }}</mat-icon>
+      </button>    
+    <input type="range" min="0" max="100" [(ngModel)]="volume" *ngIf="isMute" (input)="changeVolume()">
+</div>
